@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  @apply p-0 m-0 bg-white;
+}
+
+
+.light-mode{
+   @apply bg-white
+}
+
+.dark-mode{
+  @apply  bg-black 
+}
+
+
+
+
+.loading-skeleton {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.loading-skeleton.open {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.loading-skeleton.closed {
+  opacity: 0;
+  transform: translateX(-100%);
+}
